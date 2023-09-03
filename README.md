@@ -1,27 +1,16 @@
-# MySipApp
+# Description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+This project was created as a part of the Fundamentals of VoIP course (DMET 1042) under the guidance of Dr. Hisham Othman. It focuses on implementing a Voice over Internet Protocol (VoIP) web application using Angular for the frontend and SIP.js for the Session Initiation Protocol (SIP) signaling. Additionally, Linphone is utilized for account registration and server backend management.
 
-## Development server
+# Project Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Course: Fundamentals of VoIP (DMET 1042)
+Instructor: Dr. Hisham Othman
+Technologies Used
+Angular Framework: The user interface components of this web application are built using the Angular framework, ensuring a responsive and modern design.
 
-## Code scaffolding
+SIP.js Library: We leverage the SIP.js library to implement the Session Initiation Protocol, a crucial component for real-time communication in VoIP applications.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Linphone: Linphone is employed for user account registration and as a backend server handler, providing seamless integration for VoIP services.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+You can visit our live app [welovedrhisham.me](http://welovedrhisham.me/).
