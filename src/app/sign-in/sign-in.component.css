@@ -48,3 +48,10 @@ input[type="password"] {
     background-color: #555;
 }
 
+a{
+    color: #333;
+    font-size: 12px;
+    margin-top: 10px;
+    display: inline-block;
+}
+

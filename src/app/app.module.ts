@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module'; // Import your routing module
 
 import { AppComponent } from './app.component';
-import { SignInComponent } from './sign-in/sign-in.component';
-import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignInComponent,
-    HomeComponent
+    // Other components
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule, // Add your routing module here
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
