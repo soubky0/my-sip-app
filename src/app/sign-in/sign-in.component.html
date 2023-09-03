@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Sign In</title>
+  <title>Sign In</title>
 </head>
+
 <body>
-    <h2>Sign In</h2>
-    <form >
-        <label for="form">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
+  <h2>Sign In</h2>
+  <form>
+    <label for="form">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
 
-        <label for="form">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
+    <label for="form">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
 
-        <button class="btn">Sign In</button>
-        <a href="https://www.linphone.org/freesip/home">Create a linphone account here.</a>
-    </form>
+    <button class="btn" (click)="signIn()">Sign In</button>
+    <a href="https://www.linphone.org/freesip/home">Create a linphone account here.</a>
+
+    {{ username }}
+    -------
+    {{ password }}
+  </form>
 </body>
+
 </html>
