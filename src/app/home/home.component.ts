@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Inviter, SessionState, URI, UserAgent } from 'sip.js';
+import { SimpleUser, SimpleUserOptions } from "sip.js/lib/platform/web";
 import { AppServiceService } from '../app-service.service';
 
 @Component({
@@ -11,6 +12,7 @@ import { AppServiceService } from '../app-service.service';
 export class HomeComponent {
   private userAgent!: UserAgent;
   private inviter!: Inviter;
+  private simpleUser!: SimpleUser;
 
   subUsername = new Subscription()
   subPassword = new Subscription()
@@ -35,6 +37,18 @@ export class HomeComponent {
   }
 
   ngOnInit() {
+    
+    // //Simple User Interface with OnSIP websocket server
+    // const webSocketServer = "wss://edge.sip.onsip.com";
+    // const options: SimpleUserOptions = {aor:"sip:alice@example.com"};
+    // this.simpleUser = new SimpleUser(webSocketServer, options);
+    // this.simpleUser.connect().then(() => {
+    //   console.log('User agent started');
+    //   console.log()
+    // }).catch((error) => {
+    //   console.error('Failed to start user agent:', error);
+    // });
+    
     const uri = new URI('sip', this.username, 'sip.linphone.org');
     const userAgentConfig = {
       uri: uri,
@@ -44,10 +58,8 @@ export class HomeComponent {
       authorizationUser: this.username,
       password: this.password
     };
-
     // Create a user agent instance
     this.userAgent = new UserAgent(userAgentConfig);
-
     // Start the user agent
     this.userAgent.start().then(() => {
       console.log('User agent started');
